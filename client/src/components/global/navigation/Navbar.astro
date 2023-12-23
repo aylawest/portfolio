@@ -1,0 +1,36 @@
+---
+import Logo from "../flair/Logo.astro";
+---
+
+<header id="navigation">
+  <container>
+    <Logo />
+    <nav>
+      <ul>
+        <li><a href="">Link</a></li>
+        <li><a href="">Link</a></li>
+      </ul>
+    </nav>
+  </container>
+</header>
+
+<style>
+  #navigation {
+    border-bottom: 1px solid black;
+  }
+  
+  #navigation container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  ul {
+    display: flex;
+    gap: 20px;
+  }
+
+  li {
+    list-style-type: none;
+  }
+</style>
