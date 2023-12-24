@@ -1,0 +1,23 @@
+/* ---------- light mode colors ----------- */
+body.light {
+	--theme-background: var(--gray-0);
+	--theme-background-shade: var(--gray-1);
+	--theme-body: var(--gray-7);
+	--theme-header: var(--orange);
+	--theme-accent: var(--orange);
+	--theme-gradient: linear-gradient(45deg, var(--orange), var(--yellow) 60%);
+	--theme-border: 1px solid rgb(216, 216, 216);
+	--theme-border-shade: 1px solid rgb(245, 245, 245);
+}
+
+/* ----------- dark mode colors ----------- */
+body.dark {
+	--theme-background: var(--gray-8);
+	--theme-background-shade: var(--gray-9);
+	--theme-body: var(--gray-5);
+	--theme-header: var(--pink);
+	--theme-accent: var(--camo-1);
+	--theme-gradient: linear-gradient(45deg, var(--red), var(--orange) 60%);
+	--theme-border: 1px solid rgb(64, 64, 64);
+	--theme-border-shade: 1px solid rgb(61, 61, 61);
+}

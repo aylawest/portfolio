@@ -1,28 +1,50 @@
 ---
+import InfoCard from "../../global/cards/InfoCard.astro";
+import Icon from "../../global/interactive/Icon.astro";
 import Title from "../../global/titles/Title.astro";
 ---
 
 <section id="about">
   <container>
-    <Title text="Hello" subtext="Lorem" />
+    <Title text="Hello" subtext="Developer insight." />
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit voluptates numquam aspernatur facere explicabo alias accusantium magnam inventore consequuntur, dolores, quisquam, aliquam iste tempore quo. Minus amet aspernatur odio libero voluptatem blanditiis adipisci expedita culpa explicabo ea! Tenetur delectus quod porro temporibus corporis assumenda quam. Aliquam aliquid deserunt odit facere minus eos laboriosam minima debitis inventore eligendi rerum optio ab impedit nostrum labore earum at, perferendis quos quo, odio accusantium. Aliquid minus esse, voluptas debitis quidem incidunt ducimus? Odio officiis mollitia placeat, vel tempora ex consectetur unde consequuntur. Illo tempore at laboriosam, reprehenderit doloremque accusamus saepe incidunt perferendis? Dignissimos, ipsam.</p>
     <section>
       <h4>Tech Stack</h4>
+      <div class="tech">
+        <Icon icon="fa-brands fa-js md" style="plain" aria="JavaScript" />
+        <Icon icon="fa-brands fa-java md" style="plain" aria="Java" />
+        <Icon icon="fa-brands fa-python md" style="plain" aria="Python" />
+        <Icon icon="fa-brands fa-react md" style="plain" aria="React" />
+        <Icon icon="devicon-nodejs-plain md" style="plain" aria="Node.js" />
+        <Icon icon="devicon-express-original md" style="plain" aria="Express" />
+        <Icon icon="fa-brands fa-html5 md" style="plain" aria="HTML5" />
+        <Icon icon="fa-brands fa-css3-alt md" style="plain" aria="CSS3" />
+        <Icon icon="fa-brands fa-sass md" style="plain" aria="Sass" />
+        <Icon icon="devicon-mysql-plain md" style="plain" aria="MySQL" />
+        <Icon icon="devicon-mongodb-plain md" style="plain" aria="MongoDB" />
+        <Icon icon="fa-brands fa-git-alt md" style="plain" aria="Git" />
+        <Icon icon="devicon-bash-plain md" style="plain" aria="Bash" />
+        <Icon icon="devicon-photoshop-line md" style="plain" aria="Photoshop" />
+        <Icon icon="devicon-illustrator-line md" style="plain" aria="Illustrator" />
+      </div>
     </section>
     <section>
-      <h4>Education</h4>
+      <button class="collapsible"><h4>Education</h4></button>
+      <div class="content">
+        <InfoCard title="B.S., Computer Science" description="Oregon State University"/>
+      </div>
     </section>
     <section>
-      <h4>Certifications</h4>
+      <button class="collapsible"><h4>Certifications</h4></button>
+      <div class="content">
+        <InfoCard title="ITIL 4 Foundations" description="Axelos"/>
+        <InfoCard title="Project+" description="CompTIA"/>
+      </div>
     </section>
   </container>
 </section>
 
 <style>
-  #about {
-    
-  }
-
   #about container {
     display: flex;
     flex-direction: column;
@@ -30,4 +52,57 @@ import Title from "../../global/titles/Title.astro";
     gap: 20px;
     align-items: flex-start;
   }
+
+  .tech {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  .collapsible {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+  }
+
+  .active, .collapsible:hover {
+
+  }
+
+  .collapsible:after {
+    content: '\002B';
+    font-weight: bold;
+    margin-left: 5px;
+  }
+
+  .active:after {
+    content: "\2212";
+  }
+
+  .content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+  }
 </style>
+
+<script>
+  var coll = document.getElementsByClassName("collapsible");
+  var i;
+  
+  for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var content = this.nextElementSibling;
+      if (content.style.maxHeight){
+        content.style.maxHeight = null;
+      } else {
+        content.style.maxHeight = content.scrollHeight + "px";
+      } 
+    });
+  }
+  </script>

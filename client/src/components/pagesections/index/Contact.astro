@@ -1,0 +1,67 @@
+---
+import Title from "../../global/titles/Title.astro";
+---
+<section id="contact" class="no-print">
+  <container>
+    <Title text="Let's connect" subtext="Enter your email and I'll be in touch."/>
+    <form name="contact" method="POST" data-netlify="true">
+      <input type="email" name="email" placeholder="Email" />
+      <input type="submit" id="submit" value="Send" />
+    </form>
+  </container>
+</section>
+
+<style>
+  #contact {
+    background-color: var(--theme-background-shade)
+  }
+
+  #contact container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+  }
+
+  form {
+    display: flex;
+    align-items: flex-end;
+    gap: 10px;
+  }
+
+  input {
+    padding: 10px;
+    border: 0;
+    border-radius: 6px;
+  }
+
+  input:focus {
+    border: 0;
+    outline: 0;
+  }
+  
+  #submit:hover {
+    background-color: rgb(125, 124, 124);
+  }
+
+  @media screen and (max-width: 800px) {
+    #contact container {
+      justify-content: flex-start;
+      align-items: flex-start;
+      flex-direction: column;
+    }
+
+    form {
+      width: 100%;
+      align-items: flex-end;
+    }
+
+    input:first-of-type {
+      flex: 1;
+    }
+
+    #submit {
+      width: auto;
+    }
+  }
+</style>

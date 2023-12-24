@@ -1,17 +1,19 @@
 ---
 import Logo from "../flair/Logo.astro";
 import Link from "../interactive/Link.astro";
+import ToggleMode from "../interactive/ToggleMode.astro";
 ---
 
-<header id="navbar">
+<header id="navbar" class="no-print">
   <container>
     <Logo />
     <nav aria-label="navigation">
       <ul>
+        <li><ToggleMode /></li>
         <li><Link href="/#about" style="plain" aria="About" text="About" /></li>
         <li><Link href="/#projects" style="plain" aria="Projects" text="Projects" /></li>
         <li><Link href="/resume" style="plain" aria="Resume" text="Resume" /></li>
-        <li><Link href="/" style="secondary" aria= "Contact" text="Contact" /></li>
+        <li><Link href="#contact" style="secondary" aria= "Contact" text="Contact" /></li>
       </ul>
     </nav>
   </container>

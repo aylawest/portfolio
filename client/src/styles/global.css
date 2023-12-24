@@ -4,7 +4,7 @@
 	margin: 0;
 	scroll-behavior: smooth;
 	transition: background-color 0.3s, color 0.3s;
-	color: black;
+	color: var(--theme-body);
 }
 
 body {
@@ -12,9 +12,8 @@ body {
 	display: flex;
 	flex-direction: column;
   background-color: var(--theme-background);
-  background-color: rgb(240, 242, 242);
   overflow-y: scroll;
-  font-family: 'Inter', sans-serif;
+  font-family: var(--font-body);
 }
 
 main {
@@ -30,7 +29,15 @@ container {
 }
 
 h1 {
-  font-size: 2em;
+  font-size: var(--font-size-md);
+}
+
+h3 {
+  font-size: var(--font-size-sm);
+}
+
+h4 {
+  font-size: var(--font-size-xs);
 }
 
 p {
@@ -39,6 +46,16 @@ p {
 
 a {
   text-decoration: none;
+}
+
+button {
+  font-family: var(--font-body);
+}
+
+@media print {
+  .no-print {
+      display: none;
+  }
 }
 
 @media screen and (max-width: 900px) {

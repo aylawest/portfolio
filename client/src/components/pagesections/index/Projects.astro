@@ -1,12 +1,11 @@
 ---
 import ProjectCard from "../../global/cards/ProjectCard.astro";
-import RepoCard from "../../global/cards/RepoCard.astro";
 import Title from "../../global/titles/Title.astro";
 ---
 
 <section id="projects">
   <container>
-    <Title text="Selected Work" subtext="Lorem" />
+    <Title text="Selected Work" subtext="Fueled by passion." />
     <div class="btn-container">
       <button id="all" class="active">all</button>
       <button id="back-end">&#9686</button>
@@ -60,6 +59,12 @@ import Title from "../../global/titles/Title.astro";
 </section>
 
 <style>
+  #projects container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
   .btn-container {
     display: flex;
     margin-bottom: 30px;
@@ -75,7 +80,7 @@ import Title from "../../global/titles/Title.astro";
     height: 60px;
     border: 0;
     border-radius: 50%;
-    background-color: rgb(184, 184, 83);
+    background-color: var(--theme-background-shade);
     border: 1px solid rgb(169, 169, 57);
   }
 
@@ -91,12 +96,11 @@ import Title from "../../global/titles/Title.astro";
     grid-template-rows: ;
     grid-column-gap: 30px;
     grid-row-gap: 30px;
-    margin-bottom: 130px;
   }
 
   .active {
-    background-color: var(--theme-body);
-    color: var(--theme-background);
+    background-color: var(--theme-background);
+    color: var(--theme-body);
   }
 
   @media screen and (max-width: 800px) {

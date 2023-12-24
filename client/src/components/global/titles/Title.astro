@@ -9,15 +9,16 @@ const { text, subtext } = Astro.props;
 <header>
   <h3>{ text }</h3>
   <p>{ subtext }</p>
+  
 </header>
 
 <style>
   h3 {
-  
+    font-family: var(--font-title);
+    font-size: var(--font-size-lg);
   }
 
   p {
     margin-top: 4px;
-    margin-bottom: 20px;
   }
 </style>
