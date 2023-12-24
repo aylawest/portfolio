@@ -1,5 +1,168 @@
-<section id="footer">
-  <container>
-    Footer
-  </container>
+---
+import Logo from '../flair/Logo.astro';
+import Icon from '../interactive/Icon.astro';
+---
+
+<section class="no-print">
+  <footer>
+    <h2 aria-hidden="true">Footer</h2>
+    <container>
+      <section id="brand">
+        <div>
+          <Logo />
+        </div>
+        <ul id="social-icons">
+          <li>
+            <Icon 
+              href="http://github.com/alyssaweiglein/" 
+              id="Github" 
+              style="plain" 
+              aria="GitHub" 
+              icon="fa-brands fa-github md"
+            />
+          </li>
+          
+          <li>
+            <Icon 
+              href="http://linkedin.com/in/aweiglein/" 
+              id="LinkedIn" 
+              style="plain" 
+              aria="LinkedIn" 
+              icon="fa-brands fa-linkedin md"
+            />
+          </li>
+        </ul>
+      </section>
+
+      <div id="footer-content">
+        <section class="info" id="contact-info">
+          <h4>Contact</h4>
+          <ul>
+            <li><i class="fa-solid fa-envelope" aria-label="Email"></i><a href="mailto:alyssa@arw.works.com">alyssa@arw.works.com</a></li>
+          </ul>
+        </section>
+
+        <nav aria-label="Navigate" class="links">
+          <h4>Navigate</h4>
+          <ul>
+            <li>
+              <a href="/" id="home" aria-label="Home">Home</a>
+            </li>
+            <li>
+              <a href="/#about" id="about" aria-label="About">About</a>
+            </li>
+            <li>
+              <a href="/#projects" id="projects" aria-label="Projects">Projects</a>
+            </li>
+            <li>
+              <a href="/resume" id="resume" aria-label="Resume">Resume</a>
+            </li>
+          </ul>
+        </nav>
+
+        <nav aria-label="Projects" class="links">
+          <h4>Projects</h4>
+          <ul>
+            <li>
+              <a href="/#project-1" id="project-1" aria-label="Project 1">Project 1</a>
+            </li>
+            <li>
+              <a href="/#project-2" id="project-2" aria-label="Project 2">Project 2</a>
+            </li>
+            <li>
+              <a href="/#project-3" id="project-3" aria-label="Project 3">Project 3</a>
+            </li>
+            <li>
+              <a href="/#project-4" id="project-4" aria-label="Project 4">Project 4</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <small id="legal" aria-label="Legal">
+        <ul>
+          <li>
+            <a href="/" id="terms-policy" aria-label="Terms and Conditions">Terms & Conditions</a>
+          </li>
+          <li>
+            <a href="/" id="privacy-policy" aria-label="Home">Privacy Policy</a>
+          </li>
+          <li>
+            <a href="/" id="cookie-policy" aria-label="About">Cookie Policy</a>
+          </li>
+          <li>
+            <a href="/" id="sitemap" aria-label="Services">Sitemap</a>
+          </li>
+        </ul>
+      </small>
+    </container>
+  </footer>
 </section>
+
+<style>
+  footer container {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  h2 {
+    display: none;
+  }
+
+  h4 {
+    padding-bottom: 10px;
+  }
+  
+  ul {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+  }
+
+  section #brand {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  #footer-content {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: ;
+    grid-column-gap: 14px;
+    grid-row-gap: 20px;
+  }
+  
+  #contact-info {
+    grid-area: 1 / 1 / 2 / 3;
+  }
+
+  .links ul, .info ul {
+    flex-direction: column;
+  }
+
+  .info ul li:not(:first-of-type) {
+    line-height: .6;
+  }
+  
+  span {
+    font-weight: bold;
+    width: 40px;
+    display: inline-block;
+  }
+
+  i:not(#top-row i) {
+    width: 26px;
+  }
+
+  #legal ul li {
+    opacity: .5;
+  }
+
+  @media screen and (max-width: 840px) {
+    #footer-content {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+</style>

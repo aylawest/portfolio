@@ -5,18 +5,18 @@ interface Props {
   style: string;
   aria: string;
   icon?: string;
-  text: string;
 }
 
-const { href, id, style, aria, icon, text } = Astro.props;
+const { href, id, style, aria, icon } = Astro.props;
 ---
 
 <a 
   href={ href } 
   id={ id } 
-  class={ style } 
-  aria-label={ aria }>
-  <i class={ icon }></i> { text }
+  class={ style }
+  aria-label={ aria } 
+  target="_blank">
+  <i class={ icon }></i>
 </a>
 
 <style>
@@ -24,10 +24,11 @@ const { href, id, style, aria, icon, text } = Astro.props;
     display: inline-block;
   }
 
-  .plain {
+  /* icon style */
+  .plain i {
   }
 
-  .plain:hover {
+  .plain:hover i {
     color: rgb(59, 190, 78);
   }
 
@@ -72,4 +73,18 @@ const { href, id, style, aria, icon, text } = Astro.props;
   .secondary:hover i {
     color: white;
   }
+
+  /* icon size */
+  .sm {
+    font-size: 12px;
+  }
+
+  .md {
+    font-size: 24px;
+  }
+  
+  .lg {
+    font-size: 30px;
+  }
+
 </style>
