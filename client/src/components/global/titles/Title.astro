@@ -1,0 +1,23 @@
+---
+interface Props {
+	text: string;
+  subtext: string;
+}
+
+const { text, subtext } = Astro.props;
+---
+<header>
+  <h3>{ text }</h3>
+  <p>{ subtext }</p>
+</header>
+
+<style>
+  h3 {
+  
+  }
+
+  p {
+    margin-top: 4px;
+    margin-bottom: 20px;
+  }
+</style>

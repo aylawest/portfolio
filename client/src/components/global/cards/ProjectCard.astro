@@ -1,0 +1,65 @@
+---
+export interface Props {
+  img?: string;
+  title: string;
+  description: string;
+  href: string;
+  src: string;
+  tech: string[];
+}
+
+const { img, title, description, href, src, tech } = Astro.props;
+---
+
+<section>
+  <img src={img}/>
+  <div class="top">
+    <h3>{title}</h3>
+    <p>{description}</p>
+  </div>
+
+  <ul aria-labelledby="features-list">
+    <li>Tech used:</li>
+    {tech.map((tech) => (
+      <li>{tech}</li>
+    ))}
+  </ul>
+</section>
+
+<style>
+  section {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  ul {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    flex-wrap: wrap;
+  }
+
+  li {
+    list-style: none;
+    background-color: rgb(226, 222, 222);
+    padding: 1px 4px;
+    border-radius: 4px;
+    font-size: 12px;
+  }
+
+  li:first-of-type {
+    border: 0;
+    padding: 0;
+    background-color: transparent;
+  }
+
+  img {
+    max-width: 100%;
+    border-radius: 4px;
+  }
+
+  .top {
+    flex: 1;
+  }
+</style>

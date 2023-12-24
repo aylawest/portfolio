@@ -8,9 +8,10 @@ import Link from "../interactive/Link.astro";
     <Logo />
     <nav aria-label="navigation">
       <ul>
-        <li><Link href="/" style="plain" text="About" /></li>
-        <li><Link href="/" style="primary" text="Projects" /></li>
-        <li><Link href="/" style="secondary" text="Contact" /></li>
+        <li><Link href="/#about" style="plain" aria="About" text="About" /></li>
+        <li><Link href="/#projects" style="plain" aria="Projects" text="Projects" /></li>
+        <li><Link href="/resume" style="plain" aria="Resume" text="Resume" /></li>
+        <li><Link href="/" style="secondary" aria= "Contact" text="Contact" /></li>
       </ul>
     </nav>
   </container>

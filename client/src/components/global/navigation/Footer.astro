@@ -35,14 +35,13 @@ import Icon from '../interactive/Icon.astro';
       </section>
 
       <div id="footer-content">
-        <section class="info" id="contact-info">
+        <section id="contact-info">
           <h4>Contact</h4>
           <ul>
             <li><i class="fa-solid fa-envelope" aria-label="Email"></i><a href="mailto:alyssa@arw.works.com">alyssa@arw.works.com</a></li>
           </ul>
         </section>
-
-        <nav aria-label="Navigate" class="links">
+        <section>
           <h4>Navigate</h4>
           <ul>
             <li>
@@ -58,25 +57,7 @@ import Icon from '../interactive/Icon.astro';
               <a href="/resume" id="resume" aria-label="Resume">Resume</a>
             </li>
           </ul>
-        </nav>
-
-        <nav aria-label="Projects" class="links">
-          <h4>Projects</h4>
-          <ul>
-            <li>
-              <a href="/#project-1" id="project-1" aria-label="Project 1">Project 1</a>
-            </li>
-            <li>
-              <a href="/#project-2" id="project-2" aria-label="Project 2">Project 2</a>
-            </li>
-            <li>
-              <a href="/#project-3" id="project-3" aria-label="Project 3">Project 3</a>
-            </li>
-            <li>
-              <a href="/#project-4" id="project-4" aria-label="Project 4">Project 4</a>
-            </li>
-          </ul>
-        </nav>
+        </section>
       </div>
 
       <small id="legal" aria-label="Legal">
@@ -100,6 +81,9 @@ import Icon from '../interactive/Icon.astro';
 </section>
 
 <style>
+  footer {
+    background-color: rgb(230, 230, 230);
+  }
   footer container {
     display: flex;
     flex-direction: column;
@@ -110,16 +94,15 @@ import Icon from '../interactive/Icon.astro';
     display: none;
   }
 
-  h4 {
-    padding-bottom: 10px;
-  }
-  
   ul {
     list-style: none;
     display: flex;
     gap: 10px;
   }
 
+  ul:not(#social-icons) {
+    margin-bottom: 20px;
+  }
   section #brand {
     display: flex;
     justify-content: space-between;
@@ -127,22 +110,21 @@ import Icon from '../interactive/Icon.astro';
   }
 
   #footer-content {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: ;
-    grid-column-gap: 14px;
-    grid-row-gap: 20px;
+    display: flex;
+    flex-direction: column;
   }
   
   #contact-info {
     grid-area: 1 / 1 / 2 / 3;
   }
 
-  .links ul, .info ul {
+  .info {
+    display: flex;
     flex-direction: column;
+    gap: 20px;
   }
 
-  .info ul li:not(:first-of-type) {
+  .info ul li {
     line-height: .6;
   }
   
@@ -160,9 +142,4 @@ import Icon from '../interactive/Icon.astro';
     opacity: .5;
   }
 
-  @media screen and (max-width: 840px) {
-    #footer-content {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }
 </style>

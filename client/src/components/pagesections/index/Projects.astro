@@ -1,0 +1,135 @@
+---
+import ProjectCard from "../../global/cards/ProjectCard.astro";
+import Title from "../../global/titles/Title.astro";
+---
+
+<section id="projects">
+  <container>
+    <Title text="Selected Work" subtext="Lorem" />
+    <div class="btn-container">
+      <button id="all" class="active">all</button>
+      <button id="back-end">&#9686</button>
+      <button id="full-stack" class="active">&#9681</button>
+      <button id="front-end">&#9687</button>
+    </div>
+  
+    <div id="projects-container">
+      <div class="full-stack project-card" id="project-1">
+        <ProjectCard 
+          img="https://www.shutterstock.com/blog/wp-content/uploads/sites/5/2020/02/Usign-Gradients-Featured-Image.jpg" 
+          title="Title fs" 
+          description="Description."
+          href=""
+          src=""
+          tech={['JavaScript', 'React', 'HTML5', 'CSS3', 'SCSS']} 
+        />
+      </div>
+      <div class="back-end project-card" id="project-2">
+        <ProjectCard 
+          img="https://www.shutterstock.com/blog/wp-content/uploads/sites/5/2020/02/Usign-Gradients-Featured-Image.jpg" 
+          title="Title be" 
+          description="Description."
+          href=""
+          src=""
+          tech={['Python']} 
+        />
+      </div>
+      <div class="back-end project-card" id="project-3">
+        <ProjectCard 
+          img="https://www.shutterstock.com/blog/wp-content/uploads/sites/5/2020/02/Usign-Gradients-Featured-Image.jpg" 
+          title="Title be" 
+          description="Description."
+          href=""
+          src=""
+          tech={['Java', 'SQL', 'MySQL']} 
+        />
+      </div>
+      <div class="front-end project-card" id="project-4">
+        <ProjectCard 
+          img="https://www.shutterstock.com/blog/wp-content/uploads/sites/5/2020/02/Usign-Gradients-Featured-Image.jpg" 
+          title="Title fe" 
+          description="Description."
+          href=""
+          src=""
+          tech={['JavaScript', 'Astro', 'HTML', 'CSS']} 
+        />
+      </div>
+    </div>
+  </container>
+</section>
+
+<style>
+  .btn-container {
+    display: flex;
+    margin-bottom: 30px;
+    gap: 10px;
+  }
+
+  button {
+    font-size: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    border: 0;
+    border-radius: 50%;
+    background-color: rgb(184, 184, 83);
+    border: 1px solid rgb(169, 169, 57);
+  }
+
+  button:hover {
+    border: 1px solid var(--theme-body);
+    transition: .3s;
+    cursor: pointer;
+  }
+
+  #projects-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: ;
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
+  }
+
+  .active {
+    background-color: var(--theme-body);
+    color: var(--theme-background);
+  }
+
+  @media screen and (max-width: 800px) {
+    #projects-container {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const filterBtns = document.querySelectorAll(".btn-container button");
+    const projects = document.querySelectorAll(".project-card");
+
+    function filterProjects(category: string, button: HTMLButtonElement) {
+      projects.forEach(project => {
+        const projectElement = project as HTMLElement;
+        if (category === "all" || project.classList.contains(category)) {
+          projectElement.style.display = "block";
+        } else {
+          projectElement.style.display = "none";
+        }
+      });
+
+      filterBtns.forEach(btn => btn.classList.remove("active"));
+      button.classList.add("active");
+    }
+
+    filterBtns.forEach(button => {
+      button.addEventListener("click", function () {
+        const category = button.id;
+        filterProjects(category, button as HTMLButtonElement);
+      });
+    });
+
+    filterProjects("all", document.getElementById("all") as HTMLButtonElement);
+  });
+</script>
