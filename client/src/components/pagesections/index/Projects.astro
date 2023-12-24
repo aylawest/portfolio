@@ -2,7 +2,6 @@
 import ProjectCard from "../../global/cards/ProjectCard.astro";
 import RepoCard from "../../global/cards/RepoCard.astro";
 import Title from "../../global/titles/Title.astro";
-import fetch from 'node-fetch';
 ---
 
 <section id="projects">
@@ -57,8 +56,6 @@ import fetch from 'node-fetch';
         />
       </div>
     </div>
-    <Title text="More on GitHub" subtext="Lorem" />
-    <div id="repos-container"></div>
   </container>
 </section>
 
@@ -114,7 +111,7 @@ import fetch from 'node-fetch';
     const filterBtns = document.querySelectorAll(".btn-container button");
     const projects = document.querySelectorAll(".project-card");
 
-    function filterProjects(category: string, button: HTMLButtonElement) {
+    function filterProjects(category, button) {
       projects.forEach(project => {
         const projectElement = project as HTMLElement;
         if (category === "all" || project.classList.contains(category)) {
@@ -138,20 +135,4 @@ import fetch from 'node-fetch';
     filterProjects("all", document.getElementById("all") as HTMLButtonElement);
   });
 
-  // Import fetch in the module scope
-  
-
-  export async function onMount() {
-    const API_URL = 'https://api.github.com/users/alyssaweiglein/repos';
-    const response = await fetch(API_URL);
-    const data = await response.json();
-
-    const reposContainer = document.getElementById('repos-container');
-
-    data.forEach((repo) => {
-      const repoDiv = document.createElement('div');
-      repoDiv.textContent = repo.name;
-      reposContainer.appendChild(repoDiv);
-    });
-  }
 </script>
