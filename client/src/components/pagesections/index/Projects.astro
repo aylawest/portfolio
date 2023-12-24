@@ -1,6 +1,8 @@
 ---
 import ProjectCard from "../../global/cards/ProjectCard.astro";
+import RepoCard from "../../global/cards/RepoCard.astro";
 import Title from "../../global/titles/Title.astro";
+import fetch from 'node-fetch';
 ---
 
 <section id="projects">
@@ -55,6 +57,8 @@ import Title from "../../global/titles/Title.astro";
         />
       </div>
     </div>
+    <Title text="More on GitHub" subtext="Lorem" />
+    <div id="repos-container"></div>
   </container>
 </section>
 
@@ -90,6 +94,7 @@ import Title from "../../global/titles/Title.astro";
     grid-template-rows: ;
     grid-column-gap: 30px;
     grid-row-gap: 30px;
+    margin-bottom: 130px;
   }
 
   .active {
@@ -132,4 +137,21 @@ import Title from "../../global/titles/Title.astro";
 
     filterProjects("all", document.getElementById("all") as HTMLButtonElement);
   });
+
+  // Import fetch in the module scope
+  
+
+  export async function onMount() {
+    const API_URL = 'https://api.github.com/users/alyssaweiglein/repos';
+    const response = await fetch(API_URL);
+    const data = await response.json();
+
+    const reposContainer = document.getElementById('repos-container');
+
+    data.forEach((repo) => {
+      const repoDiv = document.createElement('div');
+      repoDiv.textContent = repo.name;
+      reposContainer.appendChild(repoDiv);
+    });
+  }
 </script>

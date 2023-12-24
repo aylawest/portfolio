@@ -1,0 +1,18 @@
+---
+
+---
+<script>
+export async function onMount() {
+  const API_URL = 'https://api.github.com/users/myname/repos';
+  const response = await fetch(API_URL);
+  const data = await response.json();
+
+  const reposContainer = document.getElementById('repos-container');
+
+  data.forEach((repo) => {
+    const repoDiv = document.createElement('div');
+    repoDiv.textContent = repo.name;
+    reposContainer.appendChild(repoDiv);
+  });
+}
+</script>
