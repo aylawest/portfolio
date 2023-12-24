@@ -1,0 +1,74 @@
+---
+interface Props {
+	href: string;
+  id?: string;
+  style: string;
+  icon?: string;
+  text: string;
+}
+
+const { href, id, style, icon, text } = Astro.props;
+---
+
+<a 
+  href={ href } 
+  id={ id } 
+  class={ style } 
+  aria-label={ text }>
+  <i class={ icon }></i> { text }
+</a>
+
+<style>
+  a {
+    display: inline-block;
+  }
+
+  .plain {
+  }
+
+  .plain:hover {
+    color: rgb(59, 190, 78);
+  }
+
+  .primary {
+    background-color: rgb(27, 26, 26);
+    padding: 8px 14px;
+    border-radius: 4px;
+    border: 1px solid rgb(27, 26, 26);
+    color: white;
+  }
+
+  .primary:hover {
+    background-color: white;
+    border: 1px solid rgb(27, 26, 26);
+    color: rgb(27, 26, 26);
+  }
+
+  .primary i {
+    color: white;
+  }
+
+  .primary:hover i {
+    color: rgb(27, 26, 26);
+  }
+
+  .secondary {
+    padding: 8px 14px;
+    border-radius: 4px;
+    border: 1px solid rgb(27, 26, 26);
+  }
+
+  .secondary:hover {
+    color: white;
+    background-color: rgb(27, 26, 26);
+    border: 1px solid rgb(27, 26, 26);
+  }
+
+  .secondary i {
+    color: rgb(27, 26, 26);
+  }
+
+  .secondary:hover i {
+    color: white;
+  }
+</style>

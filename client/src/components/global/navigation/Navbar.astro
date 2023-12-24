@@ -1,25 +1,27 @@
 ---
 import Logo from "../flair/Logo.astro";
+import Link from "../interactive/Link.astro";
 ---
 
-<header id="navigation">
+<header id="navbar">
   <container>
     <Logo />
-    <nav>
+    <nav aria-label="navigation">
       <ul>
-        <li><a href="">Link</a></li>
-        <li><a href="">Link</a></li>
+        <li><Link href="/" style="plain" text="About" /></li>
+        <li><Link href="/" style="primary" text="Projects" /></li>
+        <li><Link href="/" style="secondary" text="Contact" /></li>
       </ul>
     </nav>
   </container>
 </header>
 
 <style>
-  #navigation {
-    border-bottom: 1px solid black;
+  #navbar {
+    
   }
-  
-  #navigation container {
+
+  #navbar container {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -28,6 +30,7 @@ import Logo from "../flair/Logo.astro";
   ul {
     display: flex;
     gap: 20px;
+    align-items: center;
   }
 
   li {

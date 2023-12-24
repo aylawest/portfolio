@@ -1,0 +1,42 @@
+---
+import Link from '../../global/interactive/Link.astro';
+---
+
+<section id="hero">
+  <container>
+    <p>Lorem</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, explicabo.</p>
+    <div class="link-container">
+      <Link href="/" style="primary" icon="fa-solid fa-folder-open" text="Work" />
+      <Link href="/" style="secondary" icon="fa-solid fa-file" text="Resume" />
+    </div>
+    <a href=""><i class="fa-solid fa-arrow-down"></i></a>
+  </container>
+</section>
+
+<style>
+  #hero {
+    height: calc(100vh - 99px);
+    min-height: 300px;
+  }
+
+  #hero container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 100%;
+    gap: 20px;
+    align-items: flex-start;
+  }
+
+  i {
+    font-size: 90px;
+    opacity: .05;
+  }
+
+  i:hover {
+    transform: translateY(2px);
+    transition: .1s;
+    opacity: .1;
+  }
+</style>

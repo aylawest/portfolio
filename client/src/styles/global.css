@@ -12,7 +12,9 @@ body {
 	display: flex;
 	flex-direction: column;
   background-color: var(--theme-background);
+  background-color: rgb(240, 242, 242);
   overflow-y: scroll;
+  font-family: 'Inter', sans-serif;
 }
 
 main {
@@ -33,6 +35,10 @@ h1 {
 
 p {
 	max-width: 800px;
+}
+
+a {
+  text-decoration: none;
 }
 
 @media screen and (max-width: 900px) {
