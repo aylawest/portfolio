@@ -10,10 +10,11 @@ import ToggleMode from "../interactive/ToggleMode.astro";
     <nav aria-label="navigation">
       <ul>
         <li><ToggleMode /></li>
-        <li><Link href="/#about" style="plain" aria="About" text="About" /></li>
-        <li><Link href="/#projects" style="plain" aria="Projects" text="Projects" /></li>
-        <li><Link href="/resume" style="plain" aria="Resume" text="Resume" /></li>
-        <li><Link href="#contact" style="secondary" aria= "Contact" text="Contact" /></li>
+        <li class="nav-links"><Link href="/#about" style="plain" aria="About" text="About" /></li>
+        <li class="nav-links"><Link href="/#projects" style="plain" aria="Projects" text="Projects" /></li>
+        <li class="nav-links"><Link href="/#work-with-me" style="plain" aria="Work with me" text="Work with me" /></li>
+        <li class="nav-links"><Link href="/resume" style="plain" aria="Resume" text="Resume" /></li>
+        <li><Link href="#contact" style="primary" aria= "Contact" text="Contact" /></li>
       </ul>
     </nav>
   </container>
@@ -38,5 +39,11 @@ import ToggleMode from "../interactive/ToggleMode.astro";
 
   li {
     list-style-type: none;
+  }
+
+  @media screen and (max-width: 800px) {
+    .nav-links {
+      display: none;
+    }
   }
 </style>

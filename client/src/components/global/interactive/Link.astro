@@ -28,35 +28,34 @@ const { href, id, style, aria, icon, text } = Astro.props;
   }
 
   .plain:hover {
-    color: rgb(59, 190, 78);
+    color: var(--theme-accent-2)
   }
 
   .primary {
-    background-color: rgb(27, 26, 26);
+    background-color: var(--theme-body);
     padding: 8px 14px;
     border-radius: 4px;
-    border: 1px solid rgb(27, 26, 26);
-    color: white;
+    color: var(--theme-background);
   }
 
   .primary:hover {
-    background-color: white;
-    border: 1px solid rgb(27, 26, 26);
-    color: rgb(27, 26, 26);
+    background-color: var(--theme-accent-2);
+    color: var(--theme-background);
   }
 
   .primary i {
-    color: white;
+    color: var(--theme-title);
   }
 
   .primary:hover i {
-    color: rgb(27, 26, 26);
+    color: var(--theme-background);
   }
 
   .secondary {
     padding: 8px 14px;
     border-radius: 4px;
-    border: 1px solid rgb(27, 26, 26);
+    border: 1px solid var(--theme-accent-2);
+    color: var(--theme-accent-2);
   }
 
   .secondary:hover {
@@ -66,7 +65,7 @@ const { href, id, style, aria, icon, text } = Astro.props;
   }
 
   .secondary i {
-    color: rgb(27, 26, 26);
+    color: var(--theme-title);
   }
 
   .secondary:hover i {

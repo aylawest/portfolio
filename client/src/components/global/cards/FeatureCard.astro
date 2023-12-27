@@ -1,0 +1,67 @@
+---
+export interface Props {
+	title: string;
+  text: string;
+  icon: string;
+}
+
+const { title, text, icon } = Astro.props;
+---
+
+<section class="feature">
+  <div class="title-container">
+    <i class={ icon }></i>
+    <h4 class="title">{ title }</h3>
+  </div>
+  <p class="text">{ text }</p>
+</section>
+
+<style>
+  .feature {
+    background-color: var(--theme-background-shade);
+    border-radius: 6px;
+    padding: 10px;
+  }
+
+  .title-container {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 4px;
+    font-size: .9em;
+  }
+
+  i {
+    width: 20px;
+    font-size: 18px;
+    margin-top: 3px;
+    color: var(--theme-accent);
+  }
+
+  .title {
+    margin: 0;
+    font-weight: bold;
+  }
+
+  .text {
+    font-size: .75em;
+    margin: 0;
+  }
+
+  @media screen and (max-width: 900px) {
+    .title-container {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    h4 {
+      font-size: 18px;
+    }
+  }
+
+  @media screen and (max-width:800px) {
+    .title-container {
+      flex-direction: row;
+      align-items: center;
+    }
+  }
+</style>

@@ -42,12 +42,16 @@ const { img, title, description, href, src, tech } = Astro.props;
 
   li {
     list-style: none;
-    background-color: var(--theme-background-shade);
+    background-color: var(--theme-accent-2);
     padding: 2px 5px;
     border-radius: 4px;
     font-size: 12px;
   }
 
+  li:not(:first-of-type) {
+    color: var(--theme-background);
+  }
+  
   li:first-of-type {
     border: 0;
     padding: 0;

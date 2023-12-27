@@ -1,0 +1,79 @@
+---
+import FeatureCard from "../../global/cards/FeatureCard.astro";
+import Title from "../../global/titles/Title.astro";
+---
+
+<section id="work-with-me">
+  <container>
+    <Title text="Work with me" subtext="Dedicated to building digital products that are robust, efficient, and maintainable." />
+    <div id="features-container">
+      <FeatureCard 
+        icon="fa-brands fa-pagelines" 
+        title="Adaptable" 
+        text="Versatile in both frontend and backend development, capable of seamlessly transitioning between different aspects of a project."
+        />
+      <FeatureCard 
+        icon="fa-regular fa-face-smile" 
+        title="Efficient" 
+        text="Maximizes productivity, delivering high-quality work within established timeframes." 
+      />
+      <FeatureCard 
+        icon="fa-solid fa-laptop" 
+        title="Passionate" 
+        text="Displays intense enthusiasm and dedication, infusing energy and commitment into tasks." 
+      />
+
+      <FeatureCard 
+        icon="fa-regular fa-thumbs-up" 
+        title="Detail-oriented" 
+        text="Pays meticulous attention to every aspect, ensuring precision and accuracy in work." 
+      />
+
+      <FeatureCard 
+        icon="fa-regular fa-sun" 
+        title="Collaborative" 
+        text="Thrives in teamwork, actively contributing ideas and fostering a positive group dynamic." 
+      />
+
+      <FeatureCard 
+        icon="fa-solid fa-pencil" 
+        title="Perpetual Learner" 
+        text="Embraces a lifelong commitment to learning, staying current with evolving technologies and methodologies." 
+      />
+    </div>
+  </container>
+</section>
+
+<style>
+  #work-with-me {
+    
+  }
+  
+  #work-with-me container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  #features-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+  }
+
+  @media screen and (max-width: 800px) {
+    #features-container {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    #features-container {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+</style>
