@@ -16,8 +16,7 @@ import Link from '../../global/interactive/Link.astro';
 
 <style>
   #hero {
-    height: calc(env(safe-area-inset-top, 0) + env(safe-area-inset-bottom) + 100vh - 99px);
-    min-height: 300px;	
+    min-height: 300px;
   }
 
   #hero container {
@@ -38,3 +37,14 @@ import Link from '../../global/interactive/Link.astro';
     transition: .1s;
   }
 </style>
+
+<script>
+  function setHeroHeight() {
+    const viewportHeight = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0);
+    const bottomToolbarHeight = 99; // Adjust this value based on your actual toolbar height
+    const heroHeight = viewportHeight - bottomToolbarHeight;
+    document.getElementById('hero').style.height = `${heroHeight}px`;
+  }
+  window.addEventListener('load', setHeroHeight);
+  window.addEventListener('resize', setHeroHeight);
+</script>
