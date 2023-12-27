@@ -8,7 +8,7 @@ import Link from '../../global/interactive/Link.astro';
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, explicabo.</p>
     <div class="link-container">
       <Link href="#projects" style="primary" icon="fa-solid fa-folder-open" aria="Work" text="Work" />
-      <Link href="/" style="secondary" icon="fa-solid fa-file" aria="Resume" text="Resume" />
+      <Link href="/resume" style="secondary" icon="fa-solid fa-file" aria="Resume" text="Resume" />
     </div>
     <a href="#about"><i class="fa-solid fa-arrow-down"></i></a>
   </container>
@@ -16,7 +16,7 @@ import Link from '../../global/interactive/Link.astro';
 
 <style>
   #hero {
-    height: calc(100vh - 99px);
+    height: calc(env(safe-area-inset-top, 0) + env(safe-area-inset-bottom) + 100vh - 99px);
     min-height: 300px;	
   }
 

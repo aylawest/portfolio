@@ -46,7 +46,7 @@ import Title from "../../global/titles/Title.astro";
 
 <style>
   #about {
-
+    background-color: var(--theme-background-shade);
   }
   
   #about container {
@@ -61,6 +61,10 @@ import Title from "../../global/titles/Title.astro";
     display: flex;
     gap: 20px;
     flex-wrap: wrap;
+    margin-top: 8px;
+    background-color: var(--theme-background);
+    border-radius: 6px;
+    padding: 10px 14px;
   }
 
   .collapsible {
@@ -74,7 +78,7 @@ import Title from "../../global/titles/Title.astro";
   }
 
   .active, .collapsible:hover {
-
+    color: var(--theme-accent);
   }
 
   .collapsible:after {
@@ -85,6 +89,7 @@ import Title from "../../global/titles/Title.astro";
 
   .active:after {
     content: "\2212";
+    color: var(--theme-accent);
   }
 
   .content {

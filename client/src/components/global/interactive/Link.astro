@@ -33,6 +33,7 @@ const { href, id, style, aria, icon, text } = Astro.props;
 
   .primary {
     background-color: var(--theme-body);
+    border: 1px solid var(--theme-body);
     padding: 8px 14px;
     border-radius: 4px;
     color: var(--theme-background);
@@ -40,6 +41,7 @@ const { href, id, style, aria, icon, text } = Astro.props;
 
   .primary:hover {
     background-color: var(--theme-accent-2);
+    border: 1px solid var(--theme-accent-2);
     color: var(--theme-background);
   }
 
@@ -59,9 +61,9 @@ const { href, id, style, aria, icon, text } = Astro.props;
   }
 
   .secondary:hover {
-    color: white;
-    background-color: rgb(27, 26, 26);
-    border: 1px solid rgb(27, 26, 26);
+    color: var(--theme-background);
+    background-color: var(--theme-accent-2);
+    border: 1px solid var(--theme-accent-2);
   }
 
   .secondary i {
@@ -69,6 +71,6 @@ const { href, id, style, aria, icon, text } = Astro.props;
   }
 
   .secondary:hover i {
-    color: white;
+    color: var(--theme-background);
   }
 </style>
