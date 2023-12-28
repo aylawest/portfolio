@@ -10,7 +10,8 @@ import Link from '../../global/interactive/Link.astro';
       <Link href="#projects" style="primary" icon="fa-solid fa-folder-open" aria="Work" text="Work" />
       <Link href="/resume" style="secondary" icon="fa-solid fa-file" aria="Resume" text="Resume" />
     </div>
-    <a href="#about"><i class="fa-solid fa-arrow-down"></i></a>
+    <a href="#about">
+      <iconify-icon icon="dashicons:arrow-down-alt2"></iconify-icon></a>
   </container>
 </section>
 
@@ -28,12 +29,14 @@ import Link from '../../global/interactive/Link.astro';
     align-items: flex-start;
   }
 
-  i {
-    font-size: 90px;
+  iconify-icon {
+    font-size: 40px;
+    margin-left: -7px;
+    margin-bottom: -10px;
   }
 
-  i:hover {
-    transform: translateY(2px);
+  iconify-icon:hover {
+    transform: translateY(3px);
     transition: .1s;
   }
 </style>

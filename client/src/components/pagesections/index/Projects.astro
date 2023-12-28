@@ -8,16 +8,16 @@ import Title from "../../global/titles/Title.astro";
     <Title text="Selected Work" subtext="Fueled by passion and developed with precision." />
     <div class="btn-container">
       <button id="all" class="active">All</button>
-      <button id="back-end">&#9686</button>
-      <button id="full-stack" class="active">&#9681</button>
-      <button id="front-end">&#9687</button>
+      <button id="back-end"></button>
+      <button id="full-stack" class="active"></button>
+      <button id="front-end"></button>
     </div>
   
     <div id="projects-container">
       <div class="full-stack project-card" id="project-1">
         <ProjectCard 
           img="https://www.shutterstock.com/blog/wp-content/uploads/sites/5/2020/02/Usign-Gradients-Featured-Image.jpg" 
-          title="Title fs" 
+          title="Full-stack Project" 
           description="Description."
           href=""
           src=""
@@ -27,7 +27,7 @@ import Title from "../../global/titles/Title.astro";
       <div class="back-end project-card" id="project-2">
         <ProjectCard 
           img="https://www.shutterstock.com/blog/wp-content/uploads/sites/5/2020/02/Usign-Gradients-Featured-Image.jpg" 
-          title="Title be" 
+          title="Back-end Project" 
           description="Description."
           href=""
           src=""
@@ -37,7 +37,7 @@ import Title from "../../global/titles/Title.astro";
       <div class="back-end project-card" id="project-3">
         <ProjectCard 
           img="https://www.shutterstock.com/blog/wp-content/uploads/sites/5/2020/02/Usign-Gradients-Featured-Image.jpg" 
-          title="Title be" 
+          title="Back-end Project" 
           description="Description."
           href=""
           src=""
@@ -47,7 +47,7 @@ import Title from "../../global/titles/Title.astro";
       <div class="front-end project-card" id="project-4">
         <ProjectCard 
           img="https://www.shutterstock.com/blog/wp-content/uploads/sites/5/2020/02/Usign-Gradients-Featured-Image.jpg" 
-          title="Title fe" 
+          title="Front-end Project" 
           description="Description."
           href=""
           src=""
@@ -67,32 +67,52 @@ import Title from "../../global/titles/Title.astro";
     display: flex;
     flex-direction: column;
     gap: 20px;
+    align-items: flex-start;
   }
 
   .btn-container {
     display: flex;
     margin-bottom: 30px;
     gap: 10px;
+    background-color: var(--theme-background-shade);
+    padding: 14px;
+    border-radius: 10px;
   }
 
   button {
-    font-size: 18px;
+    font-size: 17px;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     border: 0;
     border-radius: 50%;
     background-color: var(--theme-background-shade);
-    border: 1px solid var(--theme-accent-2);
     font-family: var(--font-body);
+    -webkit-box-shadow: 0px 3px 0px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 3px 0px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 3px 0px 0px rgba(0,0,0,0.75);
   }
 
   button:hover {
-    transition: .3s;
+    transition: .1s;
     cursor: pointer;
     background-color: var(--theme-accent-2);
+    transform: translateY(2px);
+    -webkit-box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.75); 
+  }
+
+  #front-end {
+    background-image: linear-gradient(90deg, rgb(255, 255, 255) 50%, rgb(34, 33, 33) 50%);
+  }
+  #back-end {
+    background-image: linear-gradient(90deg, rgb(34, 33, 33) 50%, rgb(255, 255, 255) 50%);
+  }
+  #full-stack {
+    background-color: rgb(34, 33, 33);
   }
 
   #projects-container {
