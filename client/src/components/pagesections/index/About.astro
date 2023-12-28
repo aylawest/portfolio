@@ -7,23 +7,26 @@ import Title from "../../global/titles/Title.astro";
 <section id="about">
   <container>
     <Title text="Hello" subtext="I'm Alyssa—a computer science student actively exploring job opportunities." />
-    <p>
-      Through my work, I bridge the gap between form and function, 
-      tranforming complex ideas into user-centric applications. Whether it's 
-      frontend or backend development, implementing cloud infrastructure solutions, 
-      or analyzing data sets, my strength lies in delivering top-notch work with an 
-      eye for quality, ensuring it aligns seamlessly with established timelines.  
-    </p>
-    <p>
-      Offline, you'll find me outdoors—paddleboarding at the lake, taking my pup for long walks, or cooking over a campfire. 
-    </p>
-    <p>
-      I'm eager to bring my enthusiasm and adaptable mindset to your team.
-      <br>
-      Think we'd make a good match? <a href="#contact"> Let's chat</a>.
-    </p>
+    <section id="text">
+      <p>
+        Through my work, I bridge the gap between form and function, 
+        tranforming complex ideas into user-centric applications. Whether it's 
+        frontend or backend development, implementing cloud infrastructure solutions, 
+        or analyzing data sets, my strength lies in delivering top-notch work with an 
+        eye for quality, ensuring it aligns seamlessly with established timelines.  
+      </p>
+      <p>
+        Offline, you'll find me outdoors—paddleboarding at the lake, taking my pup for long walks, or cooking over a campfire. 
+      </p>
+      <p>
+        I'm eager to bring my enthusiasm and adaptable mindset to your team.
+      </p>
+      <p> 
+        <a href="#contact"> Let's connect</a>.
+      </p>
+    </section>
     <section>
-      <h4>Tech Stack</h4>
+      <h4>Toolkit</h4>
       <div class="tech">
         <Icon icon="fa-brands fa-js md" style="plain" aria="JavaScript" />
         <Icon icon="fa-brands fa-java md" style="plain" aria="Java" />
@@ -71,6 +74,12 @@ import Title from "../../global/titles/Title.astro";
     align-items: flex-start;
   }
 
+  #text {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 30px;
+  }
   .tech {
     display: flex;
     gap: 20px;
