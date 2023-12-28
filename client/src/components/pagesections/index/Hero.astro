@@ -41,7 +41,7 @@ import Link from '../../global/interactive/Link.astro';
 <script>
   function setHeroHeight() {
     const viewportHeight = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0);
-    const bottomToolbarHeight = 99; // Adjust this value based on your actual toolbar height
+    const bottomToolbarHeight = 99;
     const heroHeight = viewportHeight - bottomToolbarHeight;
     document.getElementById('hero').style.height = `${heroHeight}px`;
   }
