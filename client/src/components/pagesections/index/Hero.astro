@@ -3,7 +3,7 @@ import Link from '../../global/interactive/Link.astro';
 ---
 
 <section id="hero">
-  <container>
+  <div class="container">
     <p>Lorem</p>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, explicabo.</p>
     <div class="link-container">
@@ -11,8 +11,9 @@ import Link from '../../global/interactive/Link.astro';
       <Link href="/resume" style="secondary" icon="fa-solid fa-file" aria="Resume" text="Resume" />
     </div>
     <a href="#about">
-      <iconify-icon icon="dashicons:arrow-down-alt2"></iconify-icon></a>
-  </container>
+      <iconify-icon icon="dashicons:arrow-down-alt2"></iconify-icon>
+    </a>
+  </div>
 </section>
 
 <style>
@@ -20,7 +21,7 @@ import Link from '../../global/interactive/Link.astro';
     min-height: 300px;
   }
 
-  #hero container {
+  #hero .container {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;

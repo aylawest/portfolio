@@ -5,7 +5,7 @@ import ToggleMode from "../interactive/ToggleMode.astro";
 ---
 
 <header id="navbar" class="no-print">
-  <container>
+  <div class="container">
     <Logo />
     <nav aria-label="navigation">
       <ul>
@@ -17,7 +17,7 @@ import ToggleMode from "../interactive/ToggleMode.astro";
         <li><Link href="#contact" style="primary" aria= "Contact" text="Contact" /></li>
       </ul>
     </nav>
-  </container>
+  </div>
 </header>
 
 <style>
@@ -25,7 +25,7 @@ import ToggleMode from "../interactive/ToggleMode.astro";
     
   }
 
-  #navbar container {
+  #navbar .container {
     display: flex;
     justify-content: space-between;
     align-items: center;

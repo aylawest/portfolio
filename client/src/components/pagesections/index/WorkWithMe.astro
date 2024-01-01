@@ -4,7 +4,7 @@ import Title from "../../global/titles/Title.astro";
 ---
 
 <section id="work-with-me">
-  <container>
+  <div class="container">
     <Title text="Work with me" subtext="Dedicated to building digital products that are accessible and maintainable." />
     <div id="features-container">
       <FeatureCard 
@@ -38,10 +38,10 @@ import Title from "../../global/titles/Title.astro";
       <FeatureCard 
         icon="fa-solid fa-pencil" 
         title="Perpetual Learner" 
-        text="Embraces a lifelong commitment to learning, staying current with evolving technologies." 
+        text="Embraces a lifelong commitment to learning by staying current with evolving technologies." 
       />
     </div>
-  </container>
+  </div>
 </section>
 
 <style>
@@ -49,7 +49,7 @@ import Title from "../../global/titles/Title.astro";
     
   }
   
-  #work-with-me container {
+  #work-with-me .container {
     display: flex;
     flex-direction: column;
     gap: 20px;

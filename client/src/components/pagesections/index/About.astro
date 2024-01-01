@@ -5,7 +5,7 @@ import Title from "../../global/titles/Title.astro";
 ---
 
 <section id="about">
-  <container>
+  <div class="container">
     <Title text="Hello" subtext="I'm Alyssa—a computer science student actively exploring job opportunities." />
     <section id="text">
       <p>
@@ -43,6 +43,7 @@ import Title from "../../global/titles/Title.astro";
         <Icon icon="devicon-bash-plain md" style="plain" aria="Bash" />
         <Icon icon="devicon-photoshop-line md" style="plain" aria="Photoshop" />
         <Icon icon="devicon-illustrator-line md" style="plain" aria="Illustrator" />
+        <Icon icon="devicon-amazonwebservices-original md" style="plain" aria="AWS" />
       </div>
     </section>
     <section>
@@ -58,7 +59,7 @@ import Title from "../../global/titles/Title.astro";
         <InfoCard title="Project+" description="CompTIA"/>
       </div>
     </section>
-  </container>
+  </div>
 </section>
 
 <style>
@@ -66,7 +67,7 @@ import Title from "../../global/titles/Title.astro";
     background-color: var(--theme-background-shade);
   }
   
-  #about container {
+  #about .container {
     display: flex;
     flex-direction: column;
     height: 100%;

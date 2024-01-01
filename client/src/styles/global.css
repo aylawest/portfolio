@@ -14,15 +14,16 @@ body {
   background-color: var(--theme-background);
   overflow-y: scroll;
   font-family: var(--font-body);
+  font-size: clamp(1rem, .9rem + .5vw, 1.3rem);
 }
 
-  main {
+main {
 	flex-grow: 1;
 }
 
-container {
+.container {
   display: block;
-  max-width: 1000px;
+  max-width: 80rem;
   margin: auto;
 	padding: 30px;
   transition: max-width .4s;
@@ -68,5 +69,11 @@ button {
 @media screen and (max-width: 900px) {
   container {
     max-width: 700px;
+  }
+}
+
+@media only screen and (min-width: 2000px) {
+  body, html {
+    font-size: 0.85vw;
   }
 }

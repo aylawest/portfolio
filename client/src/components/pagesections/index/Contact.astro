@@ -2,13 +2,13 @@
 import Title from "../../global/titles/Title.astro";
 ---
 <section id="contact" class="no-print">
-  <container>
+  <div class="container">
     <Title text="Let's connect" subtext="Enter your email and I'll be in touch."/>
     <form name="contact" method="POST" data-netlify="true">
       <input type="email" name="email" placeholder="Email" />
       <input type="submit" id="submit" value="Send" />
     </form>
-  </container>
+  </div>
 </section>
 
 <style>
@@ -16,7 +16,7 @@ import Title from "../../global/titles/Title.astro";
     background-color: var(--theme-background-shade)
   }
 
-  #contact container {
+  #contact .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -45,7 +45,7 @@ import Title from "../../global/titles/Title.astro";
   }
 
   @media screen and (max-width: 800px) {
-    #contact container {
+    #contact .container {
       justify-content: flex-start;
       align-items: flex-start;
       flex-direction: column;

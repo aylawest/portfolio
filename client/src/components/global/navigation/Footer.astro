@@ -6,7 +6,7 @@ import Icon from '../interactive/Icon.astro';
 <section class="no-print">
   <footer>
     <h2 aria-hidden="true">Footer</h2>
-    <container>
+    <div class="container">
       <section id="brand">
         <div>
           <Logo />
@@ -65,6 +65,7 @@ import Icon from '../interactive/Icon.astro';
 
       <small id="legal" aria-label="Legal">
         <ul>
+          <li id="copyright">© AW | 2023 — <span id="infinity">∞</span></li>
           <li>
             <a href="/" id="terms-policy" aria-label="Terms and Conditions">Terms & Conditions</a>
           </li>
@@ -79,7 +80,7 @@ import Icon from '../interactive/Icon.astro';
           </li>
         </ul>
       </small>
-    </container>
+    </div>
   </footer>
 </section>
 
@@ -87,7 +88,7 @@ import Icon from '../interactive/Icon.astro';
   footer {
     
   }
-  footer container {
+  footer .container {
     display: flex;
     flex-direction: column;
     gap: 14px;
@@ -152,6 +153,14 @@ import Icon from '../interactive/Icon.astro';
   }
   #legal ul li {
     opacity: .5;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+  #infinity {
+    font-size: 1.15em;
+    margin-top: -2px;
   }
 
   @media screen and (max-width: 800px) {
@@ -160,6 +169,9 @@ import Icon from '../interactive/Icon.astro';
     }
     h4 {
       font-size: 18px;
+    }
+    #legal ul {
+    flex-direction: column;
     }
   }
 </style>

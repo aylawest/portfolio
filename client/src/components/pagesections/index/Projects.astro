@@ -4,7 +4,7 @@ import Title from "../../global/titles/Title.astro";
 ---
 
 <section id="projects">
-  <container>
+  <div class="container">
     <Title text="Selected Work" subtext="Fueled by passion and developed with precision." />
     <div class="btn-container">
       <button id="all" class="active">All</button>
@@ -55,7 +55,7 @@ import Title from "../../global/titles/Title.astro";
         />
       </div>
     </div>
-  </container>
+  </div>
 </section>
 
 <style>
@@ -63,7 +63,7 @@ import Title from "../../global/titles/Title.astro";
 
   }
   
-  #projects container {
+  #projects .container {
     display: flex;
     flex-direction: column;
     gap: 20px;
