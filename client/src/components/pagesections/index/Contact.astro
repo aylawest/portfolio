@@ -3,7 +3,11 @@ import Title from "../../global/titles/Title.astro";
 ---
 <section id="contact" class="no-print">
   <div class="container">
-    <Title text="Let's connect" subtext="Enter your email and I'll be in touch."/>
+    <div class="text">
+      <Title text="Let's connect" subtext="I'm currently looking to join an innovative team."/>
+      <hr>
+      <p>Enter your email and I'll be in Touch.</p>  
+    </div>
     <form name="contact" method="POST" data-netlify="true">
       <input type="email" name="email" placeholder="Email" />
       <input type="submit" id="submit" value="Send" />
@@ -35,6 +39,12 @@ import Title from "../../global/titles/Title.astro";
     border-radius: 6px;
   }
 
+  hr {
+    margin: 10px 0;
+    width: 160px;
+    border: 2px solid rgba(255, 105, 180, 0.508);
+    border-radius: 6px;
+  }
   input:focus {
     border: 0;
     outline: 0;
