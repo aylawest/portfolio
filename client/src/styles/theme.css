@@ -1,0 +1,13 @@
+/* ----------- light mode ----------- */
+html {
+  --background: var(--white-1);
+  --text: var(--black-5);
+  --links: var(--red-1);
+}
+
+/* ----------- dark mode ----------- */
+html.dark {
+  --background: var(--black-1);
+  --text: var(--white-5);
+  --links: var(--blue-1);
+}
