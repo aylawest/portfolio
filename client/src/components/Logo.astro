@@ -1,0 +1,39 @@
+---
+const {
+  href = '/',
+  alt = 'Logo',
+  logoSrc = '/logo.svg',
+} = Astro.props;
+---
+
+<a href={href} aria-label={alt} class="logo">
+  <div id="img-container">
+    <img src={logoSrc} alt={alt} />
+  </div> 
+  {alt}
+</a>
+
+<style>
+  a.logo {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 26px;
+    text-decoration: none;
+  }
+
+  #img-container {
+    display: flex;
+    align-items: center;
+    height: 1em; /* container is the same height as the text */
+    width: auto; 
+    padding: 2px;
+    background-color: rgb(0, 0, 0);
+    border-radius: 3px;
+  }
+
+  #img-container img {
+    height: 100%; /* img scales to 100% of the container height */
+    width: auto;
+  }
+</style>
