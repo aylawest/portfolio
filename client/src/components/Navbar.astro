@@ -1,5 +1,6 @@
 ---
 import Logo from "./Logo.astro";
+import ModeToggle from "./ModeToggle.astro";
 ---
 
 <div id="navbar">
@@ -7,6 +8,7 @@ import Logo from "./Logo.astro";
     <Logo />
     <nav aria-label="Main navigation">
       <ul>
+        <ModeToggle />
         <li><a href="/">Home</a></li>
         <li><a href="/blog">Blog</a></li>
         <li><a href="/blog/post1">Post 1</a></li>
@@ -27,6 +29,7 @@ import Logo from "./Logo.astro";
     display: flex;
     gap: 14px;
     list-style-type: none;
+    align-items: center;
   }
 
   a {
