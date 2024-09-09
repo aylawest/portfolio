@@ -1,4 +1,6 @@
 ---
+import Navbar from '../components/Navbar.astro';
+
 interface Props {
 	title: string;
 	description: string;
@@ -19,15 +21,7 @@ const { title, description } = Astro.props;
     <meta name="description" content={description || 'Default description for the page'}>
 	</head>
 	<body>
-		<div id="navbar">
-			<div class="container">
-				Logo
-				<nav aria-label="Main navigation">
-					<a href="/">Home</a>
-					<a href="/blog">Blog</a>
-				</nav>
-			</div>
-		</div>
+		<Navbar />
 		<div class="page-content">
 			<slot />
 		</div>
