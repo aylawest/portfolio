@@ -1,18 +1,18 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Page from '../components/titles/Page.astro';
-import PageHistory from '../components/PageHistory.astro';
-const title = "Home";
-const description = "This is the description for the home page.";
+import Layout from "../../layouts/Layout.astro";
+import Page from "../../components/titles/Page.astro";
+import PageHistory from "../../components/PageHistory.astro";
+const title = "Post 1";
+const description = "This is the description for the blog post 1 page.";
 ---
 
 <Layout title={title} description={description}>
-	<section id="homepage">
+	<section id="post1">
 		<!-- title -->
 		<Page title={title} />
 
-		<!-- breadcrumbs -->
-		<PageHistory />
+    <!-- breadcrumbs -->
+    <PageHistory />
 
 		<main>
 			<!-- section -->
