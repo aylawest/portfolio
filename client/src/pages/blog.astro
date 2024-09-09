@@ -1,39 +1,18 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import { Breadcrumbs } from "astro-breadcrumbs";
-import "astro-breadcrumbs/breadcrumbs.css";
-
+import PageHistory from '../components/PageHistory.astro';
+import Page from '../components/titles/Page.astro';
 const title = "Blog";
 const description = "This is the description for the blog page.";
-
 ---
 
 <Layout title={title} description={description}>
 	<section id="blogpage">
 		<!-- title -->
-		<header aria-label="Main header">
-			<div class="container">
-				<h1>{title}</h1>
-			</div>
-		</header>
+		<Page title={title} />
 
-		<div class="container">
-			<Breadcrumbs ariaLabel="Structured list of pages" linkTextFormat="capitalized" separatorAriaHidden={false}>
-        <svg
-          slot="separator"
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          ><polyline points="9 18 15 12 9 6"></polyline>
-        </svg>
-      </Breadcrumbs>
-		</div>
+    <!-- breadcrumbs -->
+    <PageHistory />
 
 		<main>
 			<!-- section -->
