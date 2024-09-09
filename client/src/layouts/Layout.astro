@@ -18,10 +18,12 @@ const { title } = Astro.props;
 	</head>
 	<body>
 		<div id="navbar">
-			Logo
-			<nav>
-				Nav links
-			</nav>
+			<div class="container">
+				Logo
+				<nav>
+					Nav links
+				</nav>
+			</div>
 		</div>
 		<div class="page-content">
 			<slot />
@@ -30,4 +32,25 @@ const { title } = Astro.props;
 	</body>
 </html>
 <style is:global>
+	* {
+		padding: 0;
+		margin: 0;
+		box-sizing: border-box;
+		scroll-behavior: smooth;
+	}
+	body {
+		min-height: 100vh;
+		display: flex;
+		flex-direction: column;
+		overflow-y: scroll;
+	}
+	/* anchor footer to bottom of screen */
+	.page-content {
+		flex-grow: 1;
+	}
+	.container {
+		max-width: 1300px;
+		margin: auto;
+		padding: 30px;
+	}
 </style>
