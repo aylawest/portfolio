@@ -3,13 +3,13 @@ import Layout from '../layouts/Layout.astro';
 import { Breadcrumbs } from "astro-breadcrumbs";
 import "astro-breadcrumbs/breadcrumbs.css";
 
-const title = "Home Page Title";
-const description = "This is the description for the home page.";
+const title = "Blog";
+const description = "This is the description for the blog page.";
 
 ---
 
 <Layout title={title} description={description}>
-	<section id="homepage">
+	<section id="blogpage">
 		<!-- title -->
 		<header aria-label="Main header">
 			<div class="container">
@@ -17,11 +17,9 @@ const description = "This is the description for the home page.";
 			</div>
 		</header>
 
-		<!-- breadcrumbs -->
 		<div class="container">
-			<Breadcrumbs ariaLabel="Structured list of pages" linkTextFormat="capitalized" separatorAriaHidden={false} truncated={true}>
-        <!-- breadcrumb separator -->
-				<svg
+			<Breadcrumbs ariaLabel="Structured list of pages" linkTextFormat="capitalized" separatorAriaHidden={false}>
+        <svg
           slot="separator"
           xmlns="http://www.w3.org/2000/svg"
           width="24"

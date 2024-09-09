@@ -15,7 +15,7 @@ const { title, description } = Astro.props;
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<title>{title || 'Default Title'}</title>
+		<title>{title || 'Portfolio'}</title>
     <meta name="description" content={description || 'Default description for the page'}>
 	</head>
 	<body>
@@ -23,14 +23,19 @@ const { title, description } = Astro.props;
 			<div class="container">
 				Logo
 				<nav aria-label="Main navigation">
-					Nav links
+					<a href="/">Home</a>
+					<a href="/blog">Blog</a>
 				</nav>
 			</div>
 		</div>
 		<div class="page-content">
 			<slot />
 		</div>
-		Footer
+		<footer aria-label="Main header">
+			<div class="container">
+				Footer
+			</div>
+		</footer>
 	</body>
 </html>
 <style is:global>
