@@ -1,15 +1,15 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Page from '../components/titles/Page.astro';
 import PageHistory from '../components/PageHistory.astro';
+import Hero from '../components/Hero.astro';
 const title = "Home";
 const description = "This is the description for the home page.";
 ---
 
 <Layout title={title} description={description}>
 	<section id="homepage">
-		<!-- title -->
-		<Page title={title} />
+		<!-- hero / title -->
+		<Hero title={title} />
 
 		<!-- breadcrumbs -->
 		<PageHistory />
