@@ -16,10 +16,12 @@
   --black-4: rgb(12, 12, 12);
   --black-5: rgb(8, 8, 8);
   --red-1: rgb(245, 0, 0);
+  --red-2: rgb(201, 0, 0);
   --orange-1: rgb(255, 126, 21);
   --yellow-1: rgb(255, 217, 0);
   --green-1: rgb(0, 204, 0);
   --blue-1: rgb(29, 89, 219);
+  --blue-2: rgb(93, 141, 245);
   --purple-1: rgb(133, 8, 216);
 
   /* --------- border-radius --------- */
