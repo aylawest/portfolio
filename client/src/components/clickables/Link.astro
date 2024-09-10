@@ -1,9 +1,24 @@
 ---
 interface Props {
-	text: string;
+	alt: string;
+  style: string;
 	href: string;
 }
 
-const { text, href } = Astro.props;
+const { alt, style, href } = Astro.props;
 ---
-<a href={href}>{text}</a>
+<a href={href} class={style} aria-label={`Go to the ${alt} page`}>{alt}</a>
+
+<style>
+  a {
+    text-decoration: none;
+    padding: 4px 6px;
+    border-radius: 3px;
+  }
+  .primary {
+    background-color: aqua;
+  }
+  .secondary {
+    border: 1px solid black;
+  }
+</style>

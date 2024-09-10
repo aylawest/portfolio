@@ -1,12 +1,12 @@
 ---
 const {
   href = '/',
-  alt = 'Logo',
+  alt = 'Co',
   logoSrc = '/logo.svg',
 } = Astro.props;
 ---
 
-<a href={href} aria-label={alt} class="logo">
+<a href={href} aria-label={`Go to ${alt}'s home page`} class="logo">
   <div id="img-container">
     <img src={logoSrc} alt={alt} />
   </div> 
